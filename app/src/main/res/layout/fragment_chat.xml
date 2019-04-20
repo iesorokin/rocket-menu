@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:background="@drawable/main_fon_1"
+              android:weightSum="100"
+              android:orientation="vertical"
+              tools:context=".fragments.main.ChatFragment">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="100">
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerChat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbarSize="@dimen/scrollbar_size"
+                android:scrollbarThumbVertical="@color/colorPrimaryDark"
+                android:scrollbars="vertical">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="0"
+            android:gravity="bottom">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+            <EditText
+                    android:id="@+id/chat_edit_text_message"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="83"
+                    android:hint="Введите сообщение..."
+                    android:inputType="textAutoCorrect|textLongMessage"
+                    android:textColor="#000000"
+                    android:textColorHint="#727272" />
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="17"
+                    android:padding="10dp">
+
+                <ImageButton
+                        android:id="@+id/chat_send_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorWhite"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/ic_chat_sent" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

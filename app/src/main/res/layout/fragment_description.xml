@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".fragments.event.DescriptionFragment">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/main_fon_1"
+            android:weightSum="100">
+
+        <TextView
+                android:id="@+id/nameOfdd"
+                android:layout_width="400dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_weight="8"
+                android:textColor="@color/textBlack"
+                android:textSize="20sp"
+                android:paddingVertical="2dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:text="Тебе нужно приготовить:\nСалат - Цезарь с курицей"/>
+
+        <ImageView
+                android:layout_width="400dp"
+                android:layout_height="0dp"
+                android:src="@drawable/food_salat_1"
+                android:layout_gravity="center"
+                android:layout_weight="40"/>
+
+        <TextView
+                android:id="@+id/textViewSmallInst"
+                android:layout_width="350dp"
+                android:layout_height="0dp"
+                android:layout_weight="35"
+                android:textColor="@color/textBlack"
+                android:text="1.Зеленый салат - 1 пучок\n2.Помидоры - 1 штука\n3.Куриное филе - 300г\n4.Белый хлеб - 6 кусков\n5.Соус «Цезарь»\n6.Масло сливочное - две ст.л\n7.Чеснок - 2 зубчика\n8.Сыр пармезан"
+                android:textSize="@dimen/size_text_profile_large"
+                android:padding="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/back_for_btn_login"/>
+
+
+        <TextView
+                android:id="@+id/textStartFragment"
+                android:layout_width="400dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_weight="5"
+                android:textColor="@color/textBlack"
+                android:textSize="@dimen/size_text_profile_midle"
+                android:padding="2dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:text="Листай вправо, если нужна инструкция"/>
+
+        <Button
+                android:id="@+id/btnReady"
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:layout_weight="8"
+                android:text="Готово"
+                android:layout_marginEnd="10dp"
+                android:textSize="@dimen/size_text_profile_midle"
+                android:layout_gravity="end"
+                android:background="@drawable/back_for_btn_out"/>
+
+    </LinearLayout>
+
+</FrameLayout>
