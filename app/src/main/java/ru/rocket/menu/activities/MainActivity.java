@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.navigation_home:
                 changeFragment(new HomeFragment());
-                changeTitle("Главная");
+                changeTitle("Меню");
                 break;
 
 /*
@@ -70,11 +70,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.navigation_chat:
 
                 changeFragment(new ChatFragment());
-                changeTitle("Чат");
+                changeTitle("Корзина");
                 break;
             default:
                 changeFragment(new ChatFragment());
-                changeTitle("Чат");
+                changeTitle("Корзина");
                 break;
         }
 

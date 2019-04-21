@@ -40,7 +40,7 @@
                 android:textColor="@color/textBlack"
                 android:textStyle="bold"
                 android:textSize="20sp"
-                android:text="Итого   ...................................... 390 р">
+                android:text="Итого   ......................................... 390 р">
 
         </TextView>
 

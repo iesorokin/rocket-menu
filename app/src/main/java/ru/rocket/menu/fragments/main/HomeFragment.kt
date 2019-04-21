@@ -52,9 +52,6 @@ class HomeFragment : Fragment() {
         // Загрузка событий из базы данных
         initializeData(true)
         val isR = !isReady
-        if (isR) {
-            initializeData(false)
-        }
         return v
 
     }
@@ -89,11 +86,6 @@ class HomeFragment : Fragment() {
 
         // Do the task in background/non UI thread
         override fun doInBackground(vararg tasks: Boolean?): Void? {
-            if (!tasks[0]!!) {
-                sleep(4 * 1000)
-                addBludo()
-                isReady = true
-            }
             //todo: added rest to back for load all orders
             if (mOrderList == null) {
                 mOrderList = listOf(
