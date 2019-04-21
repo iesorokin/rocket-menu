@@ -28,7 +28,7 @@
                 android:weightSum="100">
 
             <LinearLayout
-                    android:layout_width="200dp"
+                    android:layout_width="300dp"
                     android:layout_height="0dp"
                     android:orientation="vertical"
                     android:gravity="center"
@@ -37,7 +37,7 @@
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Выбери свой цех"
+                        android:text="Выбери себе столик"
                         android:textSize="24sp"
                         android:textColor="@color/textBlack"/>
 
@@ -47,7 +47,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_marginTop="10dp"
-                        android:gravity="start"
+                        android:gravity="center"
                         android:layout_gravity="start"
                         android:weightSum="100">
 
@@ -59,7 +59,7 @@
                             android:layout_height="0dp"
                             android:textSize="19sp"
                             android:checked="true"
-                            android:text="Доготовка"/>
+                            android:text="1"/>
 
                     <RadioButton
                             android:id="@+id/radioButtonCold"
@@ -68,7 +68,7 @@
                             android:textSize="19sp"
                             android:textStyle="bold"
                             android:layout_height="0dp"
-                            android:text="Холодный цех"/>
+                            android:text="2"/>
                     <RadioButton
                             android:id="@+id/radioButtonCandy"
                             android:layout_width="wrap_content"
@@ -76,7 +76,7 @@
                             android:layout_weight="17"
                             android:textStyle="bold"
                             android:layout_height="0dp"
-                            android:text="Кондитерская"/>
+                            android:text="3"/>
 
                     <RadioButton
                             android:id="@+id/radioButtonHot"
@@ -85,7 +85,7 @@
                             android:layout_weight="17"
                             android:layout_height="0dp"
                             android:textStyle="bold"
-                            android:text="Горячий цех"/>
+                            android:text="4"/>
 
                     <RadioButton
                             android:id="@+id/radioButtonBlank"
@@ -94,7 +94,7 @@
                             android:layout_weight="17"
                             android:layout_height="0dp"
                             android:textStyle="bold"
-                            android:text="Заготовка"/>
+                            android:text="5"/>
 
                     <RadioButton
                             android:id="@+id/radioButtonBakery"
@@ -103,7 +103,7 @@
                             android:layout_weight="17"
                             android:layout_height="0dp"
                             android:textStyle="bold"
-                            android:text="Пекарня"/>
+                            android:text="6"/>
 
                 </RadioGroup>
 
@@ -140,7 +140,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="18"
                 android:layout_marginTop="15dp"
-                android:text="@string/btnLogin"
+                android:text="Сесть за столик"
                 android:textSize="@dimen/size_text_profile_midle"
                 android:textColor="@color/textBlack"
                 android:layout_gravity="end"

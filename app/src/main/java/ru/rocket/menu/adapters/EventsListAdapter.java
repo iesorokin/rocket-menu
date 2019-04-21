@@ -35,16 +35,16 @@ public class EventsListAdapter extends RecyclerView.Adapter<EventsListAdapter.Ev
 
         MyEventListener mEventListener;
         TextView eventTitle;
-        //        TextView eventDescribe;
-//        TextView eventAuthor;
+        TextView eventDescribe;
+        TextView eventAuthor;
         ImageView eventImage;
 
         EventViewHolder(View itemView) {
             super(itemView);
 
             eventTitle = itemView.findViewById(R.id.itemEventTitle);
-//            eventDescribe = itemView.findViewById(R.id.itemEventDescribe);
-//            eventAuthor = itemView.findViewById(R.id.itemEventAuthor);
+            eventDescribe = itemView.findViewById(R.id.itemEventDescribe);
+            eventAuthor = itemView.findViewById(R.id.itemEventAuthor);
             mEventListener = new MyEventListener();
             eventImage = itemView.findViewById(R.id.itemEventImage);
             itemView.setOnClickListener(mEventListener);
@@ -71,24 +71,57 @@ public class EventsListAdapter extends RecyclerView.Adapter<EventsListAdapter.Ev
 
     }
 
+    private static final int TYPE_AUTHOR = 0;
+    private static final int TYPE_GUEST = 1;
+
+    @Override
+    public int getItemViewType(int position) {
+
+        return !isAuthor(position) ? TYPE_GUEST : TYPE_AUTHOR;
+
+    }
+
+    private boolean isAuthor(int position) {
+        return mEventList.get(position).getTitle();
+    }
+
+
     @NonNull
     @Override
     public EventsListAdapter.EventViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_event, parent, false);
-
+        View view;
+//        view = new Random().nextBoolean() ?
+//                LayoutInflater.from(parent.getContext()).inflate(R.layout.item_message_author, parent, false) :
+//                LayoutInflater.from(parent.getContext()).inflate(R.layout.item_message_guest, parent, false);
+        switch (viewType) {
+            case TYPE_AUTHOR: {
+                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_event, parent, false);
+                break;
+            }
+            default: {
+                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.tab_item_event, parent, false);
+                break;
+            }
+        }
         return new EventViewHolder(view);
 
     }
 
     @Override
     public void onBindViewHolder(@NonNull EventsListAdapter.EventViewHolder holder, int position) {
+        if (isAuthor(position)) {
+            holder.eventTitle.setText(mEventList.get(position).getName());
+            holder.eventDescribe.setText(mEventList.get(position).getPrice());
+            holder.eventAuthor.setText(mEventList.get(position).getWeight());
+            holder.mEventListener.id = mEventList.get(position).getName();
+            holder.eventImage.setImageBitmap(getRandomBitmap(mEventList.get(position).getImage()));
 
-        holder.eventTitle.setText(mEventList.get(position).getName());
+        } else {
+            holder.eventTitle.setText(mEventList.get(position).getName());
 //        holder.eventDescribe.setText(mEventList.get(position).getName());
 //        holder.eventAuthor.setText(mEventList.get(position).getName());
-        holder.mEventListener.id = mEventList.get(position).getName();
-        holder.eventImage.setImageBitmap(getRandomBitmap(mEventList.get(position).getImage()));
+
+        }
 
     }
 
@@ -119,8 +152,20 @@ public class EventsListAdapter extends RecyclerView.Adapter<EventsListAdapter.Ev
                 return drawableToBitmap(MainActivity.getResourseForDraw().getDrawable(R.drawable.food_11));
             case "12":
                 return drawableToBitmap(MainActivity.getResourseForDraw().getDrawable(R.drawable.food_12));
-            default:
+            case "13":
                 return drawableToBitmap(MainActivity.getResourseForDraw().getDrawable(R.drawable.food_1));
+            case "14":
+                return drawableToBitmap(MainActivity.getResourseForDraw().getDrawable(R.drawable.food_2));
+            case "15":
+                return drawableToBitmap(MainActivity.getResourseForDraw().getDrawable(R.drawable.food_3));
+            case "16":
+                return drawableToBitmap(MainActivity.getResourseForDraw().getDrawable(R.drawable.food_4));
+            case "17":
+                return drawableToBitmap(MainActivity.getResourseForDraw().getDrawable(R.drawable.food_cake));
+            case "18":
+                return drawableToBitmap(MainActivity.getResourseForDraw().getDrawable(R.drawable.food_salat_1));
+            default:
+                return drawableToBitmap(MainActivity.getResourseForDraw().getDrawable(R.drawable.food_12));
         }
     }
 

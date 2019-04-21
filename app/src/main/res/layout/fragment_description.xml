@@ -24,7 +24,7 @@
                 android:paddingVertical="2dp"
                 android:textStyle="bold"
                 android:layout_gravity="center"
-                android:text="Тебе нужно приготовить:\nСалат - Цезарь с курицей"/>
+                android:text="Салат - Цезарь с курицей"/>
 
         <ImageView
                 android:layout_width="400dp"
@@ -35,40 +35,35 @@
 
         <TextView
                 android:id="@+id/textViewSmallInst"
-                android:layout_width="350dp"
+                android:layout_width="370dp"
                 android:layout_height="0dp"
-                android:layout_weight="35"
+                android:layout_weight="30"
                 android:textColor="@color/textBlack"
-                android:text="1.Зеленый салат - 1 пучок\n2.Помидоры - 1 штука\n3.Куриное филе - 300г\n4.Белый хлеб - 6 кусков\n5.Соус «Цезарь»\n6.Масло сливочное - две ст.л\n7.Чеснок - 2 зубчика\n8.Сыр пармезан"
+                android:text="Традиционный цезарь с нежным куриным филе.\nКаллорийность:450кк на порцию\nПорция: 250 гр\nЦена: 390р."
                 android:textSize="@dimen/size_text_profile_large"
                 android:padding="20dp"
                 android:layout_gravity="center"
                 android:background="@drawable/back_for_btn_login"/>
 
-
         <TextView
-                android:id="@+id/textStartFragment"
-                android:layout_width="400dp"
+                android:id="@+id/fsdf"
+                android:layout_width="370dp"
                 android:layout_height="0dp"
-                android:gravity="center"
-                android:layout_weight="5"
+                android:layout_weight="16"
                 android:textColor="@color/textBlack"
-                android:textSize="@dimen/size_text_profile_midle"
-                android:padding="2dp"
-                android:textStyle="bold"
-                android:layout_gravity="center"
-                android:text="Листай вправо, если нужна инструкция"/>
+                android:textSize="@dimen/size_text_profile_large"
+                android:padding="20dp"
+                android:layout_gravity="center"/>
 
         <Button
                 android:id="@+id/btnReady"
-                android:layout_width="100dp"
-                android:layout_height="0dp"
-                android:layout_weight="8"
-                android:text="Готово"
-                android:layout_marginEnd="10dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_weight="0"
+                android:layout_marginTop="10dp"
                 android:textSize="@dimen/size_text_profile_midle"
-                android:layout_gravity="end"
-                android:background="@drawable/back_for_btn_out"/>
+                android:layout_gravity="center"
+                android:background="@drawable/ic_create"/>
 
     </LinearLayout>
 

@@ -1,13 +1,12 @@
 package ru.rocket.menu.activities
 
-import android.content.Intent
 import android.content.res.Resources
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v7.app.AppCompatActivity
 import ru.rocket.menu.R
-import ru.rocket.menu.fragments.event.EventFragment
+import ru.rocket.menu.fragments.event.DescriptionFragment
 import java.io.DataInputStream
 import java.io.DataOutputStream
 import java.io.IOException
@@ -72,13 +71,12 @@ class EventActivity : AppCompatActivity() {
 */
 
 
-
         val fm = supportFragmentManager
         var fragment = fm.findFragmentById(R.id.eventFragmentContainer)
 
         if (fragment == null) {
 
-            fragment = EventFragment()
+            fragment = DescriptionFragment()
             fm.beginTransaction()
                 .add(R.id.eventFragmentContainer, fragment)
                 .commit()

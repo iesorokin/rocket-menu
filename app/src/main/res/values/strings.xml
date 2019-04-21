@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Eventer</string>
+    <string name="app_name">RockMenu</string>
     <string name="title_activity_main">Main</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>

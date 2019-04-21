@@ -69,7 +69,7 @@ class AuthFragment : Fragment() {
             val password = password.text.toString()
 
             if (!TextUtils.isEmpty(password)) {
-                progressDialog.setTitle(getString(R.string.progressDialogLogin))
+                progressDialog.setTitle("Садимся за столик")
                 progressDialog.setMessage(getString(R.string.progressDialogWait))
                 progressDialog.setCanceledOnTouchOutside(false)
                 progressDialog.isIndeterminate = false

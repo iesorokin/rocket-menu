@@ -29,8 +29,8 @@ class DescriptionFragment : Fragment() {
         mSettingsBtn = view.findViewById(R.id.btnReady)
         // Переход к настройкам
         progressDialog = ProgressDialog(activity)
-        progressDialog.setTitle("Спасибо за готовое блюдо")
-        progressDialog.setMessage("Возвращаемся к заказам")
+        progressDialog.setTitle("Спасибо, это блюдо очень вкусное")
+        progressDialog.setMessage("Возвращаемся к меню")
         progressDialog.setCanceledOnTouchOutside(false)
         progressDialog.isIndeterminate = false
         progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER)

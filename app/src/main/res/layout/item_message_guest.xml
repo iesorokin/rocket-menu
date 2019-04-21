@@ -52,36 +52,6 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="2dp"
-            android:gravity="end">
-
-            <TextView
-                android:id="@+id/chat_date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="14.14.1444 (21:31:88)"
-                android:textColor="@color/textBlack"
-                android:layout_weight="0"
-                android:textSize="@dimen/size_text_profile_small" />
-
-            <TextView
-                android:id="@+id/chat_author"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="dedog@gmail.com"
-                android:textColor="@color/textBlack"
-                android:gravity="end"
-                android:textSize="@dimen/size_text_profile_small"
-                android:layout_marginEnd="10dp"
-                android:layout_marginStart="13dp"
-                android:layout_weight="0"/>
-
-        </LinearLayout>
-
     </LinearLayout>
 
 </LinearLayout>

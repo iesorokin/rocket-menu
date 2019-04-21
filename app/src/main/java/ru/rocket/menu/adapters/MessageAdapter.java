@@ -33,7 +33,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
     @Override
     public int getItemViewType(int position) {
 
-        return isAuthor(position) ? TYPE_GUEST : TYPE_AUTHOR;
+        return !isAuthor(position) ? TYPE_GUEST : TYPE_AUTHOR;
 
     }
 
@@ -67,13 +67,11 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
 //        System.err.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!" + mMessagesList.get(position).getMessage() + "    "
 //                + mMessagesList.get(position).getFrom() + "!!!" + (mMessagesList.get(position).getDate() == null ? "NOO" : "NORM"));
         holder.messageText.setText(mMessagesList.get(position).getMessage());
-        holder.messageAuthor.setText(mMessagesList.get(position).getFrom());
-        holder.messageDate.setText(mMessagesList.get(position).getDate().toString());
 //        User user = Commands.userByEmail(mMessagesList.get(position).getFrom());
         if (mMessagesList.get(position).getFrom().equals("Холодный цех")) {
-            holder.messageImage.setImageBitmap(drawableToBitmap(MainActivity.getResourseForDraw().getDrawable(R.drawable.food_salat)));
+            holder.messageImage.setImageBitmap(drawableToBitmap(MainActivity.getResourseForDraw().getDrawable(R.drawable.food_salat_1)));
         }
-        if (mMessagesList.get(position).getFrom().equals("Кандитерская")) {
+        if (mMessagesList.get(position).getFrom().equals("Кондитерская")) {
             holder.messageImage.setImageBitmap(drawableToBitmap(MainActivity.getResourseForDraw().getDrawable(R.drawable.food_cake)));
         }
 //        holder.messageImage.setImageBitmap(getBitmap(user.getImage()));
@@ -82,16 +80,12 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
     public class MessageViewHolder extends RecyclerView.ViewHolder {
 
         TextView messageText;
-        TextView messageAuthor;
-        TextView messageDate;
         ImageView messageImage;
 
         public MessageViewHolder(View itemView) {
             super(itemView);
 
             messageText = itemView.findViewById(R.id.chat_message);
-            messageAuthor = itemView.findViewById(R.id.chat_author);
-            messageDate = itemView.findViewById(R.id.chat_date);
             messageImage = itemView.findViewById(R.id.chat_image);
 
         }

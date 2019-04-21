@@ -98,20 +98,108 @@ class HomeFragment : Fragment() {
             if (mOrderList == null) {
                 mOrderList = listOf(
                     order().copy(
+                        name = "Холодные закуски, салаты",
+                        image = "1",
+                        title = false
+                    ),
+                    order().copy(
                         name = "Салат: Селедка под шубой",
-                        image = "1"
+                        image = "1",
+                        title = true,
+                        price = "180р",
+                        weight = "150г"
+                    ),
+                    order().copy(
+                        name = "Салат: Цезарь с курицей",
+                        title = true,
+                        image = "18",
+                        price = "390р",
+                        weight = "270г"
                     ),
                     order().copy(
                         name = "Мясное ассорти",
-                        image = "2"
+                        title = true,
+                        image = "2",
+                        price = "460р",
+                        weight = "250г"
                     ),
                     order().copy(
                         name = "Блинчики с форелью",
-                        image = "3"
+                        image = "3",
+                        title = true,
+                        price = "230р",
+                        weight = "130г"
                     ),
                     order().copy(
                         name = "Холодец",
-                        image = "4"
+                        title = true,
+                        image = "4",
+                        price = "150р",
+                        weight = "100г"
+                    ),
+                    order().copy(
+                        name = "Горячие блюда",
+                        image = "1",
+                        title = false
+                    ),
+                    order().copy(
+                        name = "Яичница с беконом",
+                        image = "16",
+                        title = true,
+                        price = "380р",
+                        weight = "250г"
+                    ),
+                    order().copy(
+                        name = "Свинина с пастой карбанара",
+                        title = true,
+                        image = "10",
+                        price = "780р",
+                        weight = "650г"
+                    ),
+                    order().copy(
+                        name = "Шашлык из свинины",
+                        image = "7",
+                        title = true,
+                        price = "480р",
+                        weight = "350г"
+                    ),
+                    order().copy(
+                        name = "Свинина с вареным картофелем",
+                        title = true,
+                        image = "15",
+                        price = "1280р",
+                        weight = "750г"
+                    ),
+                    order().copy(
+                        name = "Рыба",
+                        image = "1",
+                        title = false
+                    ),
+                    order().copy(
+                        name = "Форель с броколи",
+                        image = "11",
+                        title = true,
+                        price = "780р",
+                        weight = "550г"
+                    ),
+                    order().copy(
+                        name = "Десерты",
+                        title = false,
+                        image = "10"
+                    ),
+                    order().copy(
+                        name = "Торт: Шотландия",
+                        image = "17",
+                        title = true,
+                        price = "190р",
+                        weight = "180г"
+                    ),
+                    order().copy(
+                        name = "Щастье в щоколаде",
+                        title = true,
+                        image = "15",
+                        price = "280р",
+                        weight = "220г"
                     )
                 ).toMutableList()
 
@@ -132,16 +220,17 @@ class HomeFragment : Fragment() {
 //            mProgressDialog!!.dismiss()
             mEventsListAdapter = EventsListAdapter(mOrderList)
             mRecyclerView!!.adapter = mEventsListAdapter
-            if (mRecyclerView!!.getScrollState() != RecyclerView.SCROLL_STATE_DRAGGING) {
-                mRecyclerView!!.scrollToPosition(mOrderList!!.size - 1)
-            }
+//            if (mRecyclerView!!.getScrollState() != RecyclerView.SCROLL_STATE_DRAGGING) {
+//                mRecyclerView!!.scrollToPosition(mOrderList!!.size - 1)
+//            }
         }
     }
 
     private fun order(): Order {
         return Order(
             name = "Order",
-            image = "1"
+            image = "1",
+            title = true
         )
     }
 

@@ -48,14 +48,6 @@ class ChatFragment : Fragment() {
 
         val v = inflater.inflate(R.layout.fragment_chat, container, false)
 
-        mSendBtn = v.findViewById(R.id.chat_send_btn)
-        mMessage = v.findViewById(R.id.chat_edit_text_message)
-
-        mSendBtn!!.setOnClickListener { _ ->
-            val message = mMessage!!.text.toString()
-            addMessage(message)
-        }
-
         mRecyclerView = v.findViewById(R.id.recyclerChat)
 
         mRecyclerView!!.setHasFixedSize(true)
@@ -98,19 +90,8 @@ class ChatFragment : Fragment() {
         if (mMessagesList == null)
             mMessagesList = listOf(
                 message().copy(
-                    message = "Всем привет, яблоки еще не разгрузили, подходите за ними на склад",
-                    date = LocalDateTime.now().minusHours(1).minusMinutes(23),
+                    message = "Салат: цезарь с курицей",
                     from = "Холодный цех"
-                ),
-                message().copy(
-                    message = "Сегодня мы закрываемся на час позже обычного - пятница =(",
-                    date = LocalDateTime.now().minusHours(1),
-                    from = "Кандитерская"
-                ),
-                message().copy(
-                    message = "Нужен человек в кандитерскую, заказов много",
-                    date = LocalDateTime.now().minusMinutes(3),
-                    from = "Кандитерская"
                 )
             ).toMutableList()
         activity!!.runOnUiThread {

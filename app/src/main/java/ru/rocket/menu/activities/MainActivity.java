@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     private SharedPreferences mSharedPreferences;
 
     // Кнопка для перехода к настройкам
-    private ImageButton mSettingsBtn;
+    private TextView mSettingsBtn;
 
     // Настройки нижнего меню
     private BottomNavigationViewEx.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Переход к настройкам
         mSettingsBtn.setOnClickListener(v -> {
-            Intent intent = new Intent(this, StartActivity.class);
+            Intent intent = new Intent(this, LastActivity.class);
             startActivity(intent);
             finish();
         });

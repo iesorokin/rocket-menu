@@ -7,8 +7,8 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "ru.rocket.kitchen"
-        minSdkVersion 26
+        applicationId "ru.rocket.menu"
+        minSdkVersion 22
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
